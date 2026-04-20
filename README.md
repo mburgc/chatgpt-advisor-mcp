@@ -4,7 +4,7 @@ MCP (Model Context Protocol) server that provides seamless access to ChatGPT via
 
 ## Demo
 
-<video src="https://github.com/mburgc/chatgpt-advisor-mcp/raw/refs/heads/main/demo.mp4" controls width="100%"></video>
+[Watch demo video](./demo.mp4)
 
 ## Features
 
