@@ -4,9 +4,7 @@ MCP (Model Context Protocol) server that provides seamless access to ChatGPT via
 
 ## Demo
 
-See `2026-04-14 22-39-29.mkv` for a demo video.
-
-To view: download the file and play with any video player (VLC, etc.)
+See `demo.mp4` for a demo video.
 
 ## Features
 
