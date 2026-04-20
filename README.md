@@ -2,6 +2,12 @@
 
 MCP (Model Context Protocol) server that provides seamless access to ChatGPT via Freeloader. Auto-starts Freeloader API and browser.
 
+## Demo
+
+See `2026-04-14 22-39-29.mkv` for a demo video.
+
+To view: download the file and play with any video player (VLC, etc.)
+
 ## Features
 
 - **Auto-start**: Automatically starts Freeloader API and browser
