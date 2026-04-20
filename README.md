@@ -1,40 +1,36 @@
 # ChatGPT Advisor MCP
 
-MCP (Model Context Protocol) server that provides seamless access to ChatGPT via Freeloader. Auto-starts the Freeloader API and browser - no manual setup required.
+MCP (Model Context Protocol) server that provides seamless access to ChatGPT via Freeloader. Auto-starts Freeloader API and browser.
 
 ## Features
 
-- **Auto-start**: Automatically starts Freeloader API and browser if not running
+- **Auto-start**: Automatically starts Freeloader API and browser
 - **Cross-platform**: Works on Windows, macOS, and Linux
 - **Browser detection**: Automatically finds Brave, Chrome, Edge, or Chromium
-- **Easy config**: Just add to your OpenCode MCP configuration
 - **Status tool**: Check service health anytime
 
 ## Requirements
 
 - Python 3.10+
-- [Freeloader](https://github.com/linyuxuanlin/Freeloader-n)
 - Brave or Chrome browser
+- Git
 
-## Setup
-
-### 1. Clone Freeloader
-
-```bash
-git clone https://github.com/linyuxuanlin/Freeloader-n.git freeloader
-```
-
-### 2. Install dependencies
+## Quick Install
 
 ```bash
+# Download this repo, then:
 # Windows
 setup.bat
 
 # Linux/Mac
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+chmod +x setup.sh && ./setup.sh
 ```
+
+This will:
+1. Clone Freeloader (your fork)
+2. Create a virtual environment
+3. Install dependencies (mcp, playwright, etc.)
+4. Install Playwright browsers
 
 ## Usage
 
@@ -112,7 +108,7 @@ advisor_status()
 
 ### "Freeloader not found"
 
-Set the `FREELOADER_DIR` environment variable or ensure `freeloader/` folder is next to `mcp_server.py`.
+Run `setup.bat` again - it will clone Freeloader automatically.
 
 ### "No browser found"
 
@@ -123,7 +119,13 @@ brave --remote-debugging-port=9222
 
 ### ChatGPT blocked (Cloudflare/CAPTCHA)
 
-Open your browser manually, navigate to chat.openai.com, and log in. Then restart the MCP.
+When ChatGPT shows a CAPTCHA verification:
+1. The MCP will automatically open a browser window
+2. Complete the CAPTCHA in that window
+3. Log in to your ChatGPT account
+4. Once logged in, the MCP will work automatically
+
+The browser stays open, so you only need to do this once per session.
 
 ### Port already in use
 
